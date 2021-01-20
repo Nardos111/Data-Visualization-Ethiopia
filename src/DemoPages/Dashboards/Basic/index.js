@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
+
 import {
     Row, Col,
     Button,
@@ -23,6 +24,10 @@ import {
     ComposedChart,
     CartesianGrid,
     Tooltip,
+    YAxis,
+    XAxis,
+    Legend,
+    
     LineChart
 } from 'recharts';
 
@@ -41,9 +46,54 @@ import avatar2 from '../../../assets/utils/images/avatars/2.jpg';
 import avatar3 from '../../../assets/utils/images/avatars/3.jpg';
 import avatar4 from '../../../assets/utils/images/avatars/4.jpg';
 
-
+// let csvToJson = require('convert-csv-to-json');
+// let json = csvToJson.getJsonFromCsv("/src/DemoPages/Dashboards/Basic/index.js");
+// for(let i=0; i<json.length;i++){
+//     console.log(json[i]);
+// }
+const data3 = {
+                country_name: "Ethiopia",
+                country_code: "ETH",
+                series_name: "Ratio of female to male labor force participation rate (%) (modeled ILO estimate)",
+                series_code: "SL.TLF.CACT.FM.ZS",
+                2005: 82.6449448125566,
+                2006: 82.6998002193071,
+                2007: 82.7590429857776,
+                2008: 82.826659753454,
+                2009: 82.9029678814905,
+                2010: 82.9853293287766,
+                2011: 83.0761254269609,
+                2012: 83.1696965130941,
+                2013: 83.2632059290146,
+                2014: 83.7476815109764,
+                2015: 84.2361016647291,
+                2016: 84.6458540526964,
+                2017: 85.0760885061858,
+                2018: 85.4952278253771,
+                2019: 85.6404923844396,
+                2020: 85.7780853424301
+                }
+const new_data = [
+    {name: "2005", score: 82.6449448125566},
+    {name: "2006", score: 82.6998002193071},
+    {name: "2007", score: 82.7590429857776},
+    {name: "2008", score: 82.826659753454},
+    {name: "2009", score: 82.9029678814905},
+    {name: "2010", score: 82.9853293287766},
+    {name: "2011", score: 83.0761254269609},
+    {name: "2012", score: 83.1696965130941},
+    {name: "2013", score: 83.2632059290146},
+    {name: "2014", score: 83.7476815109764},
+    {name: "2015", score: 84.2361016647291},
+    {name: "2016", score: 84.6458540526964},
+    {name: "2017", score: 85.0760885061858},
+    {name: "2018", score: 85.4952278253771},
+    {name: "2019", score: 85.6404923844396},
+    {name: "2020", score: 85.7780853424301},
+    
+]
 const data = [
-    {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
+    {name: 'Page A', uv: 1000, pv: 2400, amt: 2400},
     {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
     {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
     {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
@@ -58,7 +108,7 @@ const data = [
 ];
 
 const data2 = [
-    {name: 'Page A', uv: 5400, pv: 5240, amt: 1240},
+    {name: 'Page A', uv: 4000, pv: 1, amt: 10000},
     {name: 'Page B', uv: 7300, pv: 4139, amt: 3221},
     {name: 'Page C', uv: 8200, pv: 7980, amt: 5229},
     {name: 'Page D', uv: 6278, pv: 4390, amt: 3200},
@@ -115,7 +165,7 @@ export default class AnalyticsDashboard1 extends Component {
                             icon="pe-7s-graph3 icon-gradient bg-mean-fruit"
                         />
                         <Row>
-                            <Col md="12" lg="6">
+                            <Col md="12" lg="12">
                                 <Card className="mb-3">
                                     <CardHeader className="card-header-tab">
                                         <div className="card-header-title">
@@ -409,11 +459,14 @@ export default class AnalyticsDashboard1 extends Component {
                                             </div>
                                             <div className="widget-chart-wrapper chart-wrapper-relative">
                                                 <ResponsiveContainer height={100}>
-                                                    <LineChart data={data}
-                                                               margin={{top: 5, right: 5, left: 5, bottom: 0}}>
-                                                        <Line type='monotone' dataKey='pv' stroke='#3ac47d'
-                                                              strokeWidth={3}/>
-                                                    </LineChart>
+                                                <LineChart width={730} height={250} data={new_data}
+                                                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                                                {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                                                <XAxis dataKey="name" />
+                                                <YAxis domain={[80, 87]} />
+                                                <Tooltip />
+                                                <Line type="monotone" dataKey="score" stroke="#8884d8" />
+                                                </LineChart>
                                                 </ResponsiveContainer>
                                             </div>
                                         </div>
@@ -447,8 +500,8 @@ export default class AnalyticsDashboard1 extends Component {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col md="12" lg="6">
-                                <Row>
+                             <Col md="12" lg="6">
+                                {/* <Row>
                                     <Col md="6">
                                         <div className="card mb-3 bg-arielle-smile widget-chart text-white card-border">
                                             <div className="icon-wrapper rounded-circle">
@@ -531,7 +584,7 @@ export default class AnalyticsDashboard1 extends Component {
                                             </div>
                                         </div>
                                     </Col>
-                                </Row>
+                                </Row> */}
                                 <div className="card mb-3 widget-chart">
                                     <div className="widget-chart-content">
                                         <div className="icon-wrapper rounded-circle">
@@ -652,139 +705,6 @@ export default class AnalyticsDashboard1 extends Component {
                             </div>
                         </div>
                         <Row>
-                            <Col md="12">
-                                <Card className="main-card mb-3">
-                                    <div className="card-header">Active Users
-                                        <div className="btn-actions-pane-right">
-                                            <div role="group" className="btn-group-sm btn-group">
-                                                <button className="active btn btn-info">Last Week</button>
-                                                <button className="btn btn-info">All Month</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="table-responsive">
-                                        <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-                                            <thead>
-                                            <tr>
-                                                <th className="text-center">#</th>
-                                                <th>Name</th>
-                                                <th className="text-center">City</th>
-                                                <th className="text-center">Status</th>
-                                                <th className="text-center">Actions</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td className="text-center text-muted">#345</td>
-                                                <td>
-                                                    <div className="widget-content p-0">
-                                                        <div className="widget-content-wrapper">
-                                                            <div className="widget-content-left mr-3">
-                                                                <div className="widget-content-left">
-                                                                    <img width={40} className="rounded-circle" src={avatar4} alt="Avatar" />
-                                                                </div>
-                                                            </div>
-                                                            <div className="widget-content-left flex2">
-                                                                <div className="widget-heading">John Doe</div>
-                                                                <div className="widget-subheading opacity-7">Web Developer</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="text-center">Madrid</td>
-                                                <td className="text-center">
-                                                    <div className="badge badge-warning">Pending</div>
-                                                </td>
-                                                <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="text-center text-muted">#347</td>
-                                                <td>
-                                                    <div className="widget-content p-0">
-                                                        <div className="widget-content-wrapper">
-                                                            <div className="widget-content-left mr-3">
-                                                                <div className="widget-content-left">
-                                                                    <img width={40} className="rounded-circle" src={avatar3} alt="Avatar" />
-                                                                </div>
-                                                            </div>
-                                                            <div className="widget-content-left flex2">
-                                                                <div className="widget-heading">Ruben Tillman</div>
-                                                                <div className="widget-subheading opacity-7">Etiam sit amet orci eget</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="text-center">Berlin</td>
-                                                <td className="text-center">
-                                                    <div className="badge badge-success">Completed</div>
-                                                </td>
-                                                <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="text-center text-muted">#321</td>
-                                                <td>
-                                                    <div className="widget-content p-0">
-                                                        <div className="widget-content-wrapper">
-                                                            <div className="widget-content-left mr-3">
-                                                                <div className="widget-content-left">
-                                                                    <img width={40} className="rounded-circle" src={avatar2} alt="Avatar" />
-                                                                </div>
-                                                            </div>
-                                                            <div className="widget-content-left flex2">
-                                                                <div className="widget-heading">Elliot Huber</div>
-                                                                <div className="widget-subheading opacity-7">Lorem ipsum dolor sic</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="text-center">London</td>
-                                                <td className="text-center">
-                                                    <div className="badge badge-danger">In Progress</div>
-                                                </td>
-                                                <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="text-center text-muted">#55</td>
-                                                <td>
-                                                    <div className="widget-content p-0">
-                                                        <div className="widget-content-wrapper">
-                                                            <div className="widget-content-left mr-3">
-                                                                <div className="widget-content-left">
-                                                                 <img width={40} className="rounded-circle" src={avatar1} alt="Avatar" />
-                                                </div> 
-                                                            </div>
-                                                            <div className="widget-content-left flex2">
-                                                                <div className="widget-heading">Vinnie Wagstaff</div>
-                                                                <div className="widget-subheading opacity-7">UI Designer</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="text-center">Amsterdam</td>
-                                                <td className="text-center">
-                                                    <div className="badge badge-info">On Hold</div>
-                                                </td>
-                                                <td className="text-center">
-                                                    <button type="button" className="btn btn-primary btn-sm">Details</button>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div className="d-block text-center card-footer">
-                                        <button className="mr-2 btn-icon btn-icon-only btn btn-outline-danger"><i className="pe-7s-trash btn-icon-wrapper"> </i></button>
-                                        <button className="btn-wide btn btn-success">Save</button>
-                                    </div>
-                                </Card>
-                            </Col>
-                        </Row>
-                        <Row>
                             <Col md="4">
                                 <div className="card mb-3 widget-chart">
                                     <div className="widget-chart-content">
@@ -868,8 +788,8 @@ export default class AnalyticsDashboard1 extends Component {
                                     </div>
                                 </div>
                             </Col>
-                        </Row>
-                    </div>
+                        </Row> 
+                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
         )
