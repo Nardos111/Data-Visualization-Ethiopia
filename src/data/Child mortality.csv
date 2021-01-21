@@ -1,0 +1,23 @@
+Geographic area,Indicator,Sex,TIME_PERIOD,OBS_VALUE,Unit multiplier,Unit of measure,Observation Status,Observation confidentaility,LOWER_BOUND,UPPER_BOUND,WGTD_SAMPL_SIZE,OBS_FOOTNOTE,SERIES_FOOTNOTE,DATA_SOURCE,SOURCE_LINK,CUSTODIAN,Time period activity related to when the data are collected,REF_PERIOD,COVERAGE_TIME,Current age
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2009,21.8947476835616,,Deaths per 1000 children aged 5,Normal value,,18.3549098975582,25.9845830953188,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2010,20.0837964547624,,Deaths per 1000 children aged 5,Normal value,,16.4642532133953,24.2518803253149,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2011,18.4603701466787,,Deaths per 1000 children aged 5,Normal value,,14.7195196320768,22.6874179264812,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2012,16.9415111786822,,Deaths per 1000 children aged 5,Normal value,,13.1227524551527,21.2884885927921,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2013,15.5651494741795,,Deaths per 1000 children aged 5,Normal value,,11.6111709247393,20.0137397901954,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2014,14.3181453484042,,Deaths per 1000 children aged 5,Normal value,,10.2346956532276,18.9454036521527,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2015,13.2655035395647,,Deaths per 1000 children aged 5,Normal value,,9.10396911760971,18.033260425064,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2016,12.4191451317631,,Deaths per 1000 children aged 5,Normal value,,8.20346816332688,17.2572730138307,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2017,11.7403425300586,,Deaths per 1000 children aged 5,Normal value,,7.45444031383433,16.6818999656731,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2018,11.1644735765227,,Deaths per 1000 children aged 5,Normal value,,6.84152481307144,16.2035880216915,,,,,,,,,,Total
+Ethiopia,Mortality rate (children aged 5 to 14 years),Total,2019,10.652389932278,,Deaths per 1000 children aged 5,Normal value,,6.33114711802409,15.9119334207844,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2009,55278,,Number of deaths,Normal value,,46851,65089,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2010,51575,,Number of deaths,Normal value,,42750,61766,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2011,48145,,Number of deaths,Normal value,,38740,58709,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2012,44786,,Number of deaths,Normal value,,35088,55835,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2013,41643,,Number of deaths,Normal value,,31512,53244,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2014,38736,,Number of deaths,Normal value,,28142,50930,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2015,36285,,Number of deaths,Normal value,,25237,49018,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2016,34391,,Number of deaths,Normal value,,23089,47358,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2017,32957,,Number of deaths,Normal value,,21381,46364,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2018,31805,,Number of deaths,Normal value,,19954,45720,,,,,,,,,,Total
+Ethiopia,Deaths (children aged 5-14),Total,2019,30817,,Number of deaths,Normal value,,18821,45424,,,,,,,,,,Total

@@ -1,0 +1,4 @@
+Geographic area,Indicator,Sex,TIME_PERIOD,OBS_VALUE,Unit multiplier,Unit of measure,Observation Status,Observation confidentaility,LOWER_BOUND,UPPER_BOUND,WGTD_SAMPL_SIZE,OBS_FOOTNOTE,SERIES_FOOTNOTE,DATA_SOURCE,SOURCE_LINK,CUSTODIAN,Time period activity related to when the data are collected,REF_PERIOD,COVERAGE_TIME,Current age
+Ethiopia,"Adjusted net attendance rate, one year before the official primary entry age",Female,2016,50.6,,%,Adjusted,Free,,,,,,DHS 2016,,,,,2016,Total
+Ethiopia,"Adjusted net attendance rate, one year before the official primary entry age",Male,2016,52.4,,%,Adjusted,Free,,,,,,DHS 2016,,,,,2016,Total
+Ethiopia,"Adjusted net attendance rate, one year before the official primary entry age",Total,2016,51.5,,%,Adjusted,Free,,,,,,DHS 2016,,,,,2016,Total
