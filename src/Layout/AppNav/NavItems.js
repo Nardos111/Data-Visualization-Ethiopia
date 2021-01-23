@@ -1,60 +1,62 @@
 export const MainNav = [
     {
-        icon: 'pe-7s-rocket',
+        icon: 'pe-7s-ribbon',
         label: 'Main Page',
-        to: '#/dashboards/basic',
+        to: '#/dashboards/main',
     },
 ];
-export const ComponentsNav = [
+export const EconomyNav = [
     {
-        icon: 'pe-7s-diamond',
-        label: 'Elements',
-        content: [
-            {
-                label: 'Cards',
-                to: '#/elements/cards',
-            },
-            {
-                label: 'List Groups',
-                to: '#/elements/list-group',
-            },
-        ],
-    },
-    {
-        icon: 'pe-7s-car',
-        label: 'Components',
-        content: [
-            {
-                label: 'Tabs',
-                to: '#/components/tabs',
-            },
-            {
-                label: 'Carousel',
-                to: '#/components/carousel',
-            },
-            {
-                label: 'Maps',
-                to: '#/components/maps',
-            },
-        ],
-    },
-    {
-        icon: 'pe-7s-display2',
-        label: 'Regular Tables',
+        icon: 'pe-7s-angle-right',
+        label: 'GDG',
         to: '#/tables/regular-tables',
     },
-];
-export const WidgetsNav = [
     {
-        icon: 'pe-7s-graph2',
-        label: 'Dashboard Boxes',
+        icon: 'pe-7s-angle-right',
+        label: 'GDG Per Capita',
+        to: '#/elements/cards',
+    },
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Exchange Rate',
+        to: '#/elements/list-group',
+    },
+];
+export const HealthNav = [
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Child Mortality',
         to: '#/widgets/dashboard-boxes',
     },
-];
-export const ChartsNav = [
     {
-        icon: 'pe-7s-graph2',
-        label: 'ChartJS',
-        to: '#/charts/chartjs',
+        icon: 'pe-7s-angle-right',
+        label: 'Clean Water',
+        to: '#/components/tabs',
+    },{
+        icon: 'pe-7s-angle-right',
+        label: 'Life Expectancy',
+        to: '#/components/carousel',
     },
 ];
+export const EducationNav = [
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Gender Proportion',
+        to: '#/charts/chartjs',
+    },
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'School Enrollment',
+        to: '#/dashboards/basic',
+    },
+    
+];
+export const PopulationNav = [
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Population',
+        to: '#/components/maps',
+    },
+];
+
+// to: '#/tables/regular-tables',

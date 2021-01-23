@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import DoughnutExample from '../doughnut';
 import PieExample from '../pie';
+import BubbleExample from '../bubble';
 import DynamicDoughnutExample from '../dynamicDoughnut';
 import RadarExample from '../radar';
 import PolarExample from '../polar';
@@ -61,6 +62,14 @@ export default class ChartJsCircular extends React.Component {
                                 <CardBody>
                                     <CardTitle>Pie Chart</CardTitle>
                                     <PieExample/>
+                                </CardBody>
+                            </Card>
+                        </Col>
+                        <Col lg="6">
+                            <Card className="main-card mb-3">
+                                <CardBody>
+                                    <CardTitle>Bubble Chart</CardTitle>
+                                    <BubbleExample/>
                                 </CardBody>
                             </Card>
                         </Col>

@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom';
 // DASHBOARDS
 
 import BasicDashboard from './Basic/';
+import AnalyticsDashboard1 from './Main'
 
 // Layout
 
@@ -19,6 +20,8 @@ const Dashboards = ({match}) => (
             <div className="app-main__outer">
                 <div className="app-main__inner">
                     <Route path={`${match.url}/basic`} component={BasicDashboard}/>
+                    <Route path={`${match.url}/main`} component={AnalyticsDashboard1}/>
+
                 </div>
                 <AppFooter/>
             </div>

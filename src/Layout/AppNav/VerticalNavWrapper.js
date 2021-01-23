@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom';
 
 import MetisMenu from 'react-metismenu';
 
-import {MainNav, ComponentsNav, WidgetsNav, ChartsNav} from './NavItems';
+import {MainNav, EconomyNav, HealthNav, EducationNav, PopulationNav} from './NavItems';
 
 class Nav extends Component {
 
@@ -14,12 +14,14 @@ class Nav extends Component {
             <Fragment>
                 <h5 className="app-sidebar__heading">Menu</h5>
                 <MetisMenu content={MainNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
-                <h5 className="app-sidebar__heading">UI Components</h5>
-                <MetisMenu content={ComponentsNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
-                <h5 className="app-sidebar__heading">Widgets</h5>
-                <MetisMenu content={WidgetsNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
-                <h5 className="app-sidebar__heading">Charts</h5>
-                <MetisMenu content={ChartsNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
+                <h5 className="app-sidebar__heading">ECONOMY</h5>
+                <MetisMenu content={EconomyNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
+                <h5 className="app-sidebar__heading">HEALTH</h5>
+                <MetisMenu content={HealthNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
+                <h5 className="app-sidebar__heading">EDUCATION</h5>
+                <MetisMenu content={EducationNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
+                <h5 className="app-sidebar__heading">POPULATION</h5>
+                <MetisMenu content={PopulationNav} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
             </Fragment>
         );
     }
