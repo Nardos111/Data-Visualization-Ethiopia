@@ -162,7 +162,7 @@ export default class AnalyticsDashboard1 extends Component {
                     transitionLeave={false}>
                     <div>
                         <PageTitle
-                            heading="Data Visualization"
+                            heading="Climate Change"
                             subheading="Graphical representation of Ethiopia's information and data."
                             icon="pe-7s-graph3 icon-gradient bg-mean-fruit"
                         />

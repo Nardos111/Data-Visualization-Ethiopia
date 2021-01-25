@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import classnames from 'classnames';
 
+import { ResponsiveCalendar } from '@nivo/calendar'
 
 
 import {
@@ -80,6 +81,16 @@ const data3 = {
                 2019: 85.6404923844396,
                 2020: 85.7780853424301
                 }
+
+const cdata = [
+    {"day": "2017-04-13", "value": 54},
+    {"day": "2017-11-29", "value": 366},
+    {"day": "2018-01-15","value": 96},
+    {"day": "2019-10-09", "value": 179},
+    {"day": "2017-11-15", "value": 152},
+    {"day": "2018-08-28", "value": 351},
+    {"day": "2019-09-21","value": 274},
+    ]
 const new_data = [
     {name: "2005", score: 82.6449448125566},
     {name: "2006", score: 82.6998002193071},
@@ -167,65 +178,209 @@ export default class AnalyticsDashboard1 extends Component {
                     transitionLeave={false}>
                     <div>
                         <PageTitle
-                            heading="Data Visualization"
-                            subheading="Graphical representation of Ethiopia's information and data."
-                            icon="pe-7s-graph3 icon-gradient bg-mean-fruit"
+                            heading="Environmental"
+                            subheading="This section provides the options to visualize historical climate data for different timeframes via map and annual cycle chart."
+                            icon="pe-7s-leaf icon-gradient bg-night-sky"
                         />
-                          <Row>
-                                    <Col lg="6">
-                                    <Card className="main-card mb-3">
-                                <CardHeader>ECONOMY</CardHeader>
-                                <CardBody>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate purus at ex pulvinar, eget dignissim dui consectetur. Vestibulum sit amet ultrices magna, sed cursus risus. Suspendisse potenti. Proin eu porta orci, sit amet vestibulum dolor. Nullam ut faucibus arcu, eleifend posuere lorem. Nullam faucibus at tellus non tristique. Aliquam malesuada leo nunc, nec tincidunt nulla volutpat id.</p>
-                                    <Button color="warning">Go somewhere</Button>
-                                </CardBody>
-                                <CardFooter>Footer</CardFooter>
-                            </Card>
+                        <div className="row">
+                            <div className="col-md-6 col-lg-3">
+                                <div className="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
+                                    <div className="widget-content">
+                                        <div className="widget-content-outer">
+                                            <div className="widget-content-wrapper">
+                                                <div className="widget-content-left pr-2 fsize-1">
+                                                    <div className="widget-numbers mt-0 fsize-3 text-night-sky">71%</div>
+                                                </div>
+                                                <div className="widget-content-right w-100">
+                                                    <div className="progress-bar-xs progress">
+                                                        <div className="progress-bar bg-night-sky" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100" style={{ width: '71%' }}></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-content-left fsize-1">
+                                                <div className="text-muted opacity-6 "><i className="header-icon lnr-earth icon-gradient bg-primary"></i>  Carbon Emission</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
+                                    <div className="widget-content">
+                                        <div className="widget-content-outer">
+                                            <div className="widget-content-wrapper">
+                                                <div className="widget-content-left pr-2 fsize-1">
+                                                    <div className="widget-numbers mt-0 fsize-3">54%</div>
+                                                </div>
+                                                <div className="widget-content-right w-100">
+                                                    <div className="progress-bar-xs progress">
+                                                        <div className="progress-bar bg-night-sky" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style={{ width: '54%' }}></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-content-left fsize-1">
+                                                <div className="text-muted opacity-6"> <i className="header-icon lnr-sun icon-gradient bg-warning"> </i>Current Temperature in A.A</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
+                                    <div className="widget-content">
+                                        <div className="widget-content-outer">
+                                            <div className="widget-content-wrapper">
+                                                <div className="widget-content-left pr-2 fsize-1">
+                                                    <div className="widget-numbers mt-0 fsize-3">32%</div>
+                                                </div>
+                                                <div className="widget-content-right w-100">
+                                                    <div className="progress-bar-xs progress">
+                                                        <div className="progress-bar bg-night-sky" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style={{ width: '32%' }}></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-content-left fsize-1">
+                                                <div className="text-muted opacity-6"><i className="header-icon lnr-cloud icon-gradient bg-happy-green"> </i>Mean Annual Temperature</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="card-shadow-primary mb-3 widget-chart widget-chart2 text-left card">
+                                    <div className="widget-content">
+                                        <div className="widget-content-outer">
+                                            <div className="widget-content-wrapper">
+                                                <div className="widget-content-left pr-2 fsize-1">
+                                                    <div className="widget-numbers mt-0 fsize-3">89%</div>
+                                                </div>
+                                                <div className="widget-content-right w-100">
+                                                    <div className="progress-bar-xs progress">
+                                                        <div className="progress-bar bg-night-sky" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style={{ width: '89%' }}></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-content-left fsize-1">
+                                                <div className="text-muted opacity-6"><i className="header-icon lnr-drop icon-gradient bg-happy-fisher"> </i>Mean Annual Precipitation</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <Row>
+                        <Col lg="6">
+                                        <div className="card mb-3 widget-chart">
+                                            <div className="widget-chart-content">
+                                                <div className="icon-wrapper rounded-circle">
+                                                    <div className="icon-wrapper-bg bg-night-sky"/>
+                                                    <i className="lnr-laptop-phone text-night-sky"/>
+                                                </div>
+                                                <div className="widget-numbers">
+                                                    5.82k
+                                                </div>
+                                                <div className="widget-subheading">
+                                                    Weather Pattern
+                                                </div>
+                                                <div className="widget-description text-danger">
+                                                    <FontAwesomeIcon icon={faAngleDown}/>
+                                                    <span className="pl-1">54.1%</span>
+                                                </div>
+                                            </div>
+                                            <div className="widget-chart-wrapper chart-wrapper-relative">
+                                                <ResponsiveContainer height={100}>
+                                                    <BarChart data={data}>
+                                                        <Bar dataKey='uv' fill='#81a4ff' stroke='#3f6ad8' strokeWidth={2}/>
+                                                    </BarChart>
+                                                </ResponsiveContainer>
+                                            </div>
+                                        </div>
                                     </Col>
                                     <Col lg="6">
                                     <Card className="main-card mb-3">
-                                <CardHeader>HEALTH</CardHeader>
                                 <CardBody>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate purus at ex pulvinar, eget dignissim dui consectetur. Vestibulum sit amet ultrices magna, sed cursus risus. Suspendisse potenti. Proin eu porta orci, sit amet vestibulum dolor. Nullam ut faucibus arcu, eleifend posuere lorem. Nullam faucibus at tellus non tristique. Aliquam malesuada leo nunc, nec tincidunt nulla volutpat id.</p>
-                                    <Button color="warning">Go somewhere</Button>
+                                    <CardTitle>Ethiopia's Climate</CardTitle>
+                                    <p align="justify">Ethiopia’s large land area and diverse topography results in different climates across the country. Thus, Ethiopia’s climate is tropical in the south-east and north-east lowlands and cooler in the highland regions in the central and north of the country. Seasonal rainfall is driven mainly by the migration of the Inter‐Tropical Convergence Zone (ITCZ). Mean annual rainfall distribution is approximately 2,000 mm over the south-western highlands and less than 300 mm over the south-eastern and north-eastern lowlands.  Temperatures across Ethiopia can range from below 15ºC, over the highlands to above 25ºC in the lowlands.</p>
+                                    <br/>
+                                    <a href="http://sdwebx.worldbank.org/climateportal/countryprofile/doc/GFDRRCountryProfiles/wb_gfdrr_climate_change_country_profile_for_ETH.pdf" target="_blank"><Button color="primary">Details</Button></a>
                                 </CardBody>
-                                <CardFooter>Footer</CardFooter>
                             </Card>
                             </Col>
                                 </Row>
                                 <Row>
                                     <Col lg="6">
                                     <Card className="main-card mb-3">
-                                <CardHeader>EDUCATION</CardHeader>
                                 <CardBody>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate purus at ex pulvinar, eget dignissim dui consectetur. Vestibulum sit amet ultrices magna, sed cursus risus. Suspendisse potenti. Proin eu porta orci, sit amet vestibulum dolor. Nullam ut faucibus arcu, eleifend posuere lorem. Nullam faucibus at tellus non tristique. Aliquam malesuada leo nunc, nec tincidunt nulla volutpat id.</p>
-                                    <Button color="warning">Go somewhere</Button>
+                                    <CardTitle>Temperature</CardTitle>
+                                    <p align="justify">Average temperatures in Ethiopia have increased by an average of 1ºC since 1960 at an average rate of 0.25ºC per decade; most noticeable increases have occurred July through September. <br/> <br/>The average number of ‘hot nights’ (the hottest 10% of nights annually) increased by 37.5% between 1960 and 2003 and the average number of ‘hot days’ per year, increased by 20%.<br/> <br/></p>
+
+                                    <Button color="primary">Details</Button>
                                 </CardBody>
-                                <CardFooter>Footer</CardFooter>
                             </Card>
                                     </Col>
                                     <Col lg="6">
                                     <Card className="main-card mb-3">
-                                <CardHeader>POPULATION</CardHeader>
                                 <CardBody>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate purus at ex pulvinar, eget dignissim dui consectetur. Vestibulum sit amet ultrices magna, sed cursus risus. Suspendisse potenti. Proin eu porta orci, sit amet vestibulum dolor. Nullam ut faucibus arcu, eleifend posuere lorem. Nullam faucibus at tellus non tristique. Aliquam malesuada leo nunc, nec tincidunt nulla volutpat id.</p>
-                                    <Button color="warning">Go somewhere</Button>
+                                    <CardTitle>Precipitation</CardTitle>
+                                    <p align="justify">Long-term trends in rainfall are difficult to determine for Ethiopia due to strong inter‐annual and inter‐decadal variability in rainfall data. <br/> The south-central region of the country has experienced a 20% decrease in rainfall since 1960. <br/> The rise of sea surface temperatures in the Indian Ocean influences the migration of the ITCZ which can further increase variability in the timing and duration of rainfall seasons, altering traditional rainfall patterns and cause more frequent drought.</p>
+
+                                    <Button color="primary">Details</Button>
                                 </CardBody>
-                                <CardFooter>Footer</CardFooter>
                             </Card>
-                            </Col>
+                                    </Col>
                                 </Row>
+                                <Row>
+                            <Col md="12" lg="12">
+                                <Card className="mb-3">
+                                    <CardHeader className="card-header-tab">
+                                        <div className="card-header-title">
+                                            
+                                            Rainfall Pattern
+                                        </div>
+                                    </CardHeader>
+                                    <TabContent activeTab={this.state.activeTab1}>
+                                        <TabPane tabId="11">
+                                            <div className="widget-chart p-0">
+                                                <ResponsiveContainer height={600}>
+                                                <ResponsiveCalendar
+                                                    data={cdata}
+                                                    from="2017-03-01"
+                                                    to="2019-07-12"
+                                                    emptyColor="#eeeeee"
+                                                    colors={[ '#61cdbb', '#97e3d5', '#e8c1a0', '#f47560' ]}
+                                                    margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
+                                                    yearSpacing={40}
+                                                    monthBorderColor="#ffffff"
+                                                    dayBorderWidth={2}
+                                                    dayBorderColor="#ffffff"
+                                                    legends={[
+                                                        {
+                                                            anchor: 'bottom-right',
+                                                            direction: 'row',
+                                                            translateY: 36,
+                                                            itemCount: 4,
+                                                            itemWidth: 42,
+                                                            itemHeight: 50,
+                                                            itemsSpacing: 14,
+                                                            itemDirection: 'right-to-left'
+                                                        }
+                                                    ]}
+                                                />
+                                                </ResponsiveContainer>
+                                            </div>
+                                        </TabPane>
+                                    </TabContent>
+                                </Card>
+                              
+                            </Col>
+                        </Row>
                         <Row>
                             <Col md="12" lg="12">
                                 <Card className="mb-3">
                                     <CardHeader className="card-header-tab">
                                         <div className="card-header-title">
                                             <i className="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
-                                            Bandwidth Reports
+                                            Rainfall Pattern Graph
                                         </div>
                                     </CardHeader>
                                     <TabContent activeTab={this.state.activeTab1}>
@@ -243,120 +398,17 @@ export default class AnalyticsDashboard1 extends Component {
                                                     <div className="widget-description mt-0 text-success">
                                                         <FontAwesomeIcon icon={faArrowUp}/>
                                                         <span className="pl-2 pr-2">37.2%</span>
-                                                        <span className="text-muted opacity-8">performance increase</span>
+                                                        <span className="text-muted opacity-8">Rainfall increase</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <CardBody className="pt-2">
-                                                <Row>
-                                                    <Col md="6">
-                                                        <div className="widget-content">
-                                                            <div className="widget-content-outer">
-                                                                <div className="widget-content-wrapper">
-                                                                    <div className="widget-content-left mr-3">
-                                                                        <div className="widget-numbers fsize-3 text-muted">
-                                                                            23%
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="widget-content-right">
-                                                                        <div className="text-muted opacity-6">
-                                                                            Deploys
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="widget-progress-wrapper mt-1">
-                                                                    <Progress
-                                                                        className="progress-bar-sm progress-bar-animated-alt"
-                                                                        color="warning"
-                                                                        value="23"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Col>
-                                                    <Col md="6">
-                                                        <div className="widget-content">
-                                                            <div className="widget-content-outer">
-                                                                <div className="widget-content-wrapper">
-                                                                    <div className="widget-content-left mr-3">
-                                                                        <div className="widget-numbers fsize-3 text-muted">
-                                                                            76%
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="widget-content-right">
-                                                                        <div className="text-muted opacity-6">
-                                                                            Traffic
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="widget-progress-wrapper mt-1">
-                                                                    <Progress
-                                                                        className="progress-bar-sm progress-bar-animated-alt"
-                                                                        color="info"
-                                                                        value="76"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Col>
-                                                </Row>
-                                                <div className="divider mt-4"/>
-                                                <Row>
-                                                    <Col md="6">
-                                                        <div className="widget-content">
-                                                            <div className="widget-content-outer">
-                                                                <div className="widget-content-wrapper">
-                                                                    <div className="widget-content-left mr-3">
-                                                                        <div className="widget-numbers fsize-3 text-muted">
-                                                                            83%
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="widget-content-right">
-                                                                        <div className="text-muted opacity-6">
-                                                                            Servers Load
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="widget-progress-wrapper mt-1">
-                                                                    <Progress
-                                                                        className="progress-bar-sm progress-bar-animated-alt"
-                                                                        color="danger"
-                                                                        value="83"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Col>
-                                                    <Col md="6">
-                                                        <div className="widget-content">
-                                                            <div className="widget-content-outer">
-                                                                <div className="widget-content-wrapper">
-                                                                    <div className="widget-content-left mr-3">
-                                                                        <div className="widget-numbers fsize-3 text-muted">
-                                                                            48%
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="widget-content-right">
-                                                                        <div className="text-muted opacity-6">
-                                                                            Reported Bugs
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="widget-progress-wrapper mt-1">
-                                                                    <Progress
-                                                                        className="progress-bar-sm progress-bar-animated-alt"
-                                                                        color="alternate"
-                                                                        value="48"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </Col>
-                                                </Row>
-
-                                            </CardBody>
                                         </TabPane>
                                     </TabContent>
                                 </Card>
                               
                             </Col>
                         </Row>
+                        
                      </div>
                 </ReactCSSTransitionGroup>
             </Fragment>

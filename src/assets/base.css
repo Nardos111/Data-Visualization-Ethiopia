@@ -8437,7 +8437,9 @@ button,
     flex: 1;
     flex-direction: column;
     display: flex;
-    z-index: 12; }
+    z-index: 12;
+  margin-top: -60px;
+  }
   .app-main .app-main__inner {
     padding: 30px 30px 0;
     flex: 1; }
