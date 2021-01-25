@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import ResizeDetector from 'react-resize-detector';
 
 import AppMain from '../../Layout/AppMain';
+import Navbar from "../Top";
 
 class Main extends React.Component {
     constructor(props) {
@@ -42,6 +43,7 @@ class Main extends React.Component {
                             {'closed-sidebar-mobile': closedSmallerSidebar || width < 1250},
                             {'sidebar-mobile-open': enableMobileMenu},
                         )}>
+                            <Navbar/>
                             <AppMain/>
                         </div>
                     </Fragment>

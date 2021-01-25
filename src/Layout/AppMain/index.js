@@ -48,7 +48,6 @@ const AppMain = () => {
 
             </Suspense>
 
-            {/* Charts */}
 
             <Suspense fallback={
                 <div className="loader-container">
