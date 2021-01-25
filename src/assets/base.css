@@ -8103,7 +8103,7 @@ button,
   position: relative;
   flex: 0 0 280px;
   margin-top: -60px;
-  padding-top: 60px;
+  padding-top: 30px;
   transition: all .2s; }
   .app-sidebar .app-sidebar__inner {
     padding: 2px 1.5rem 1.5rem; }

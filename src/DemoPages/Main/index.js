@@ -6,7 +6,8 @@ import {withRouter} from 'react-router-dom';
 import ResizeDetector from 'react-resize-detector';
 
 import AppMain from '../../Layout/AppMain';
-import Navbar from "../Top";
+import Navbar from '../Top'
+
 
 class Main extends React.Component {
     constructor(props) {
