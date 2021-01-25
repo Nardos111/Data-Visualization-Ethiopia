@@ -4,6 +4,11 @@ export const MainNav = [
         label: 'Main Page',
         to: '#/dashboards/main',
     },
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Economy',
+        to: '#/dashboards/main',
+    },
 ];
 export const EconomyNav = [
     {

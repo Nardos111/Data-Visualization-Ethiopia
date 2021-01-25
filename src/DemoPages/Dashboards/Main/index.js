@@ -379,7 +379,6 @@ export default class AnalyticsDashboard1 extends Component {
                                 <Card className="mb-3">
                                     <CardHeader className="card-header-tab">
                                         <div className="card-header-title">
-                                            <i className="header-icon lnr-rocket icon-gradient bg-tempting-azure"> </i>
                                             Rainfall Pattern Graph
                                         </div>
                                     </CardHeader>

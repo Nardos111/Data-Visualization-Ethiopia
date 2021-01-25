@@ -15,6 +15,7 @@
 li {
   list-style: none;
   margin-top: 10px;
+  display: inline-block;
 }
 
 img {
@@ -33,27 +34,33 @@ img {
   max-width: 1500px;
   padding-left: 20px;
 
+
 }
-.button {
+.button2 {
   background-color: white;
-  margin-left: 1050px;
   border-color:rgb(74, 80, 86);
   color: rgb(74, 80, 86);
   margin-bottom: 4px;
+}
+.button {
+  background-color: white;
+  margin-left: 950px;
+  border-color:rgb(74, 80, 86);
+  color: rgb(74, 80, 86);
+  margin-bottom: 4px;
+  margin-right: 20px;
 }
 .button:hover {
   background-color: rgb(29, 42, 62);
   border-color:rgb(29, 42, 62);
   color: white;
 }
-li:hover {
-  background-color: rgb(235,235,235);
-  text-decoration: none;
-  transition: all 0.5s ease;
-  border-radius: 6px;
-
- 
+.button2:hover {
+  background-color: rgb(29, 42, 62);
+  border-color:rgb(29, 42, 62);
+  color: white;
 }
+
 
 
 

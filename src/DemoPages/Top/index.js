@@ -17,8 +17,10 @@ function Navbar() {
             <li className="nav-item">            
                 Data Visualization
         </li>
+          
+          <li> <Button color="warning" outline className="button">አማርኛ</Button> </li>
+          <li> <Button color="warning" outline className="button2">Dark Mode</Button> </li>
           </ul>
-          <Button color="warning" outline className="button">Go somewhere</Button>
         </div>
        
       </nav>
