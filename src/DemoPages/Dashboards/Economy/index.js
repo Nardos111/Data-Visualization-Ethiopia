@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { ResponsiveLine } from '@nivo/line'
+import classnames from 'classnames';
+import { ResponsiveRadar } from '@nivo/radar'
 
 import {
     Row, Col,
@@ -9,11 +11,22 @@ import {
     Card,
     CardBody,
     TabContent,
+    Progress,
     TabPane,
     CardTitle, 
 } from 'reactstrap';
 
 import PageTitle from '../../../Layout/AppMain/PageTitle';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+import {
+    faAngleUp,
+    faArrowRight,
+    faArrowUp,
+    faArrowLeft,
+    faAngleDown
+} from '@fortawesome/free-solid-svg-icons';
+
 
 import {
     AreaChart, Area, Line,
@@ -29,6 +42,25 @@ import {
     
     LineChart
 } from 'recharts';
+
+const rdata = [{"taste": "fruity", "chardonay": 73, "carmenere": 114, "syrah": 96},
+    {"taste": "bitter", "chardonay": 48, "carmenere": 94, "syrah": 30},
+    {"taste": "heavy", "chardonay": 52, "carmenere": 25, "syrah": 57},
+    {"taste": "strong", "chardonay": 76, "carmenere": 62, "syrah": 26},
+    {"taste": "sunny", "chardonay": 66, "carmenere": 120, "syrah": 111}
+  ]
+const data2 = [
+    {name: 'Page A', uv: 5400, pv: 5240, amt: 1240},
+    {name: 'Page B', uv: 7300, pv: 4139, amt: 3221},
+    {name: 'Page C', uv: 8200, pv: 7980, amt: 5229},
+    {name: 'Page D', uv: 6278, pv: 4390, amt: 3200},
+    {name: 'Page E', uv: 3189, pv: 7480, amt: 6218},
+    {name: 'Page D', uv: 9478, pv: 6790, amt: 2200},
+    {name: 'Page E', uv: 1289, pv: 1980, amt: 7218},
+    {name: 'Page F', uv: 3139, pv: 2380, amt: 5150},
+    {name: 'Page G', uv: 5349, pv: 3430, amt: 3210},
+]
+
 const bdata = [
     {"name": "Page A", "uv": 4000, "pv": 2400},
     {"name": "Page B", "uv": 3000, "pv": 1398},
@@ -183,8 +215,9 @@ export default class economyDashboard extends Component {
                         <PageTitle
                             heading="Economy"
                             subheading="This section provides the options to visualize historical climate data for different timeframes via map and annual cycle chart."
-                            icon="pe-7s-leaf icon-gradient bg-night-sky"
+                            icon="pe-7s-cash icon-gradient bg-night-sky"
                         />
+                                                                                
                         <Row>
                                     <Col lg="12">
                                     <Card className="main-card mb-3">
@@ -270,9 +303,13 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                     </Col>
                                     
                                 </Row>
+                        <Row>
+                        <Row>
+                        <Col md="12" lg="6">
                                 <Row>
-                            <Col md="12" lg="12">
-                                <Card className="mb-3">
+                                <Col md="6">
+                                    <div className="mb-3 widget-chart card-hover-shadow-2x">
+                                    <Card>
                                     <CardHeader className="card-header-tab">
                                         <div className="card-header-title">
                                             
@@ -280,13 +317,11 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                         </div>
                                     </CardHeader>
                                 </Card>
-                              
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col lg="3">
-                            
-                                <div className="card mb-3 widget-chart card-hover-shadow-2x">
+                                </div>
+                                    </Col>
+                                    <Col md="6"></Col>
+                                    <Col md="6">
+                                    <div className="card mb-3 widget-chart card-hover-shadow-2x">
                                     <div className="icon-wrapper border-light rounded">
                                         <div className="icon-wrapper-bg bg-light"/>
                                         <i className="lnr-diamond icon-gradient bg-happy-itmeo"/>
@@ -298,9 +333,9 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                         United States Dollar
                                     </div>
                                 </div>
-                            </Col>
-                            <Col lg="3">
-                            
+                                    </Col>
+                                    <Col md="6">
+                                        
                                 <div className="card mb-3 widget-chart card-hover-shadow-2x">
                                     <div className="icon-wrapper border-light rounded">
                                         <div className="icon-wrapper-bg bg-light"/>
@@ -313,12 +348,9 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                        Euro
                                     </div>
                                 </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                        <Col lg="3">
-                            
-                            <div className="card mb-3 widget-chart card-hover-shadow-2x">
+                                    </Col>
+                                    <Col md="6">
+                                    <div className="card mb-3 widget-chart card-hover-shadow-2x">
                                 <div className="icon-wrapper border-light rounded">
                                     <div className="icon-wrapper-bg bg-light"/>
                                     <i className="lnr-diamond icon-gradient bg-happy-itmeo"/>
@@ -330,10 +362,9 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                     Pound
                                 </div>
                             </div>
-                        </Col>
-                        <Col lg="3">
-                        
-                            <div className="card mb-3 widget-chart card-hover-shadow-2x">
+                                    </Col>
+                                    <Col md="6">
+                                    <div className="card mb-3 widget-chart card-hover-shadow-2x">
                                 <div className="icon-wrapper border-light rounded">
                                     <div className="icon-wrapper-bg bg-light"/>
                                     <i className="lnr-diamond icon-gradient bg-happy-itmeo"/>
@@ -345,8 +376,77 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                     Yuan
                                 </div>
                             </div>
-                        </Col>
-                       
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col md="12" lg="6">
+                                <Card className="mb-3">
+                                    <CardHeader className="card-header-tab">
+                                        <div className="card-header-title">
+                                           Budget Allocation
+                                        </div>
+                                    </CardHeader>
+                                    
+                                            <CardBody className="pt-2">
+                                            <ResponsiveContainer height={400}>
+                                            <ResponsiveRadar
+        data={rdata}
+        keys={[ 'chardonay', 'carmenere', 'syrah' ]}
+        indexBy="taste"
+        maxValue="auto"
+        margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
+        curve="linearClosed"
+        borderWidth={2}
+        borderColor={{ from: 'color' }}
+        gridLevels={5}
+        gridShape="circular"
+        gridLabelOffset={36}
+        enableDots={true}
+        dotSize={10}
+        dotColor={{ theme: 'background' }}
+        dotBorderWidth={2}
+        dotBorderColor={{ from: 'color' }}
+        enableDotLabel={true}
+        dotLabel="value"
+        dotLabelYOffset={-12}
+        colors={{ scheme: 'nivo' }}
+        fillOpacity={0.25}
+        blendMode="multiply"
+        animate={true}
+        motionConfig="wobbly"
+        isInteractive={true}
+        legends={[
+            {
+                anchor: 'top-left',
+                direction: 'column',
+                translateX: -50,
+                translateY: -40,
+                itemWidth: 80,
+                itemHeight: 20,
+                itemTextColor: '#999',
+                symbolSize: 12,
+                symbolShape: 'circle',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#000'
+                        }
+                    }
+                ]
+            }
+        ]}
+    />
+    </ResponsiveContainer>
+                                            </CardBody>
+                                           
+                                        
+                                </Card>
+                                <Row>
+                                </Row>
+                            </Col>
+                            
+                        </Row>
                         </Row>
                         <Row>
                         <Col lg="6">

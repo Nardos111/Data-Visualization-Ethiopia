@@ -9,6 +9,11 @@ export const MainNav = [
         label: 'Economy',
         to: '#/dashboards/economy',
     },
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Demographic',
+        to: '#/dashboards/demographic',
+    },
 ];
 export const EconomyNav = [
     {

@@ -8,7 +8,7 @@ const data = {
       label: 'My First dataset',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
+      backgroundColor: 'blue',
       borderColor: 'rgba(75,192,192,1)',
       borderCapStyle: 'round',
       borderDash: [],
