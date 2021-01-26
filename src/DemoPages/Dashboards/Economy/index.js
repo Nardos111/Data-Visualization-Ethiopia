@@ -1,8 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import classnames from 'classnames';
-
-import { ResponsiveCalendar } from '@nivo/calendar'
 import { ResponsiveLine } from '@nivo/line'
 
 import {
@@ -11,15 +8,9 @@ import {
     CardHeader,
     Card,
     CardBody,
-    Progress,
     TabContent,
     TabPane,
-    CardImg, 
-    CardText,
     CardTitle, 
-    CardSubtitle, 
-    CardLink, 
-    CardFooter
 } from 'reactstrap';
 
 import PageTitle from '../../../Layout/AppMain/PageTitle';
@@ -38,52 +29,6 @@ import {
     
     LineChart
 } from 'recharts';
-
-import {
-    faAngleUp,
-    faArrowRight,
-    faArrowUp,
-    faArrowLeft,
-    faAngleDown
-} from '@fortawesome/free-solid-svg-icons';
-
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
-import avatar1 from '../../../assets/utils/images/avatars/1.jpg';
-import avatar2 from '../../../assets/utils/images/avatars/2.jpg';
-import avatar3 from '../../../assets/utils/images/avatars/3.jpg';
-import avatar4 from '../../../assets/utils/images/avatars/4.jpg';
-
-const sdata = [
-    {"name": "Page A", "uv": 4000, "pv": 2400, "amt": 2400},
-    {"name": "Page B", "uv": 3000, "pv": 1398, "amt": 2210},
-    {"name": "Page C", "uv": 2000, "pv": 9800, "amt": 2290},
-    {"name": "Page D", "uv": 2780, "pv": 3908, "amt": 2000},
-    {"name": "Page E", "uv": 1890, "pv": 4800, "amt": 2181},
-    {"name": "Page F", "uv": 2390, "pv": 3800, "amt": 2500},
-    {"name": "Page G", "uv": 3490, "pv": 4300,"amt": 2100}]
-const data3 = {
-                country_name: "Ethiopia",
-                country_code: "ETH",
-                series_name: "Ratio of female to male labor force participation rate (%) (modeled ILO estimate)",
-                series_code: "SL.TLF.CACT.FM.ZS",
-                2005: 82.6449448125566,
-                2006: 82.6998002193071,
-                2007: 82.7590429857776,
-                2008: 82.826659753454,
-                2009: 82.9029678814905,
-                2010: 82.9853293287766,
-                2011: 83.0761254269609,
-                2012: 83.1696965130941,
-                2013: 83.2632059290146,
-                2014: 83.7476815109764,
-                2015: 84.2361016647291,
-                2016: 84.6458540526964,
-                2017: 85.0760885061858,
-                2018: 85.4952278253771,
-                2019: 85.6404923844396,
-                2020: 85.7780853424301 
-                }
 const bdata = [
     {"name": "Page A", "uv": 4000, "pv": 2400},
     {"name": "Page B", "uv": 3000, "pv": 1398},
@@ -179,34 +124,6 @@ const adata = [
   {"name": "Page G", "uv": 3490, "pv": 4300,"amt": 2100
   }
 ]
-const cdata = [
-    {"day": "2017-04-13", "value": 54},
-    {"day": "2017-11-29", "value": 366},
-    {"day": "2018-01-15","value": 96},
-    {"day": "2019-10-09", "value": 179},
-    {"day": "2017-11-15", "value": 152},
-    {"day": "2018-08-28", "value": 351},
-    {"day": "2019-09-21","value": 274},
-    ]
-const new_data = [
-    {name: "2005", score: 82.6449448125566},
-    {name: "2006", score: 82.6998002193071},
-    {name: "2007", score: 82.7590429857776},
-    {name: "2008", score: 82.826659753454},
-    {name: "2009", score: 82.9029678814905},
-    {name: "2010", score: 82.9853293287766},
-    {name: "2011", score: 83.0761254269609},
-    {name: "2012", score: 83.1696965130941},
-    {name: "2013", score: 83.2632059290146},
-    {name: "2014", score: 83.7476815109764},
-    {name: "2015", score: 84.2361016647291},
-    {name: "2016", score: 84.6458540526964},
-    {name: "2017", score: 85.0760885061858},
-    {name: "2018", score: 85.4952278253771},
-    {name: "2019", score: 85.6404923844396},
-    {name: "2020", score: 85.7780853424301},
-    
-]
 const data = [
     {name: 'Page A', uv: 1000, pv: 2400, amt: 2400},
     {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
@@ -222,17 +139,6 @@ const data = [
     {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
-const data2 = [
-    {name: 'Page A', uv: 4000, pv: 1, amt: 10000},
-    {name: 'Page B', uv: 7300, pv: 4139, amt: 3221},
-    {name: 'Page C', uv: 8200, pv: 7980, amt: 5229},
-    {name: 'Page D', uv: 6278, pv: 4390, amt: 3200},
-    {name: 'Page E', uv: 3189, pv: 7480, amt: 6218},
-    {name: 'Page D', uv: 9478, pv: 6790, amt: 2200},
-    {name: 'Page E', uv: 1289, pv: 1980, amt: 7218},
-    {name: 'Page F', uv: 3139, pv: 2380, amt: 5150},
-    {name: 'Page G', uv: 5349, pv: 3430, amt: 3210},
-];
 
 export default class economyDashboard extends Component {
     constructor() {
@@ -313,8 +219,8 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                                     <YAxis />
                                                     <Tooltip />
                                                     <Legend />
-                                                    <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-                                                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                                                    <Line type="monotone" dataKey="pv" stroke="blue" />
+                                                    <Line type="monotone" dataKey="uv" stroke="red" />
                                                     </LineChart>
                                                 </ResponsiveContainer>
                                             </div>
@@ -495,71 +401,71 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                 <CardBody>
                                     <ResponsiveContainer height={400}>
                                     <ResponsiveLine
-        data={vdata}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-        xScale={{ type: 'point' }}
-        yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
-        yFormat=" >-.2f"
-        axisTop={null}
-        axisRight={null}
-        axisBottom={{
-            orient: 'bottom',
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'transportation',
-            legendOffset: 36,
-            legendPosition: 'middle'
-        }}
-        axisLeft={{
-            orient: 'left',
-            tickSize: 5,
-            tickPadding: 5,
-            tickRotation: 0,
-            legend: 'count',
-            legendOffset: -40,
-            legendPosition: 'middle'
-        }}
-        pointSize={10}
-        pointColor={{ theme: 'background' }}
-        pointBorderWidth={2}
-        pointBorderColor={{ from: 'serieColor' }}
-        pointLabelYOffset={-12}
-        useMesh={true}
-        legends={[
-            {
-                anchor: 'bottom-right',
-                direction: 'column',
-                justify: false,
-                translateX: 100,
-                translateY: 0,
-                itemsSpacing: 0,
-                itemDirection: 'left-to-right',
-                itemWidth: 80,
-                itemHeight: 20,
-                itemOpacity: 0.75,
-                symbolSize: 12,
-                symbolShape: 'circle',
-                symbolBorderColor: 'rgba(0, 0, 0, .5)',
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemBackground: 'rgba(0, 0, 0, .03)',
-                            itemOpacity: 1
-                        }
-                    }
-                ]
-            }
-        ]}
-    />
-    </ResponsiveContainer>
+                                        data={vdata}
+                                        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+                                        xScale={{ type: 'point' }}
+                                        yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
+                                        yFormat=" >-.2f"
+                                        axisTop={null}
+                                        axisRight={null}
+                                        axisBottom={{
+                                            orient: 'bottom',
+                                            tickSize: 5,
+                                            tickPadding: 5,
+                                            tickRotation: 0,
+                                            legend: 'transportation',
+                                            legendOffset: 36,
+                                            legendPosition: 'middle'
+                                        }}
+                                    axisLeft={{
+                                        orient: 'left',
+                                        tickSize: 5,
+                                        tickPadding: 5,
+                                        tickRotation: 0,
+                                        legend: 'count',
+                                        legendOffset: -40,
+                                        legendPosition: 'middle'
+                                    }}
+                                pointSize={10}
+                                pointColor={{ theme: 'background' }}
+                                pointBorderWidth={2}
+                                pointBorderColor={{ from: 'serieColor' }}
+                                pointLabelYOffset={-12}
+                                useMesh={true}
+                                legends={[
+                                    {
+                                    anchor: 'bottom-right',
+                                    direction: 'column',
+                                    justify: false,
+                                    translateX: 100,
+                                    translateY: 0,
+                                    itemsSpacing: 0,
+                                    itemDirection: 'left-to-right',
+                                    itemWidth: 80,
+                                    itemHeight: 20,
+                                    itemOpacity: 0.75,
+                                    symbolSize: 12,
+                                    symbolShape: 'circle',
+                                    symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                                    effects: [
+                                        {
+                                            on: 'hover',
+                                            style: {
+                                                itemBackground: 'rgba(0, 0, 0, .03)',
+                                                itemOpacity: 1
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]}
+                                    />
+                                    </ResponsiveContainer>
                                 </CardBody>
                             </Card>
-                            </Col>
-                                </Row>
-                     </div>
-                </ReactCSSTransitionGroup>
+                        </Col>
+                    </Row>
+                </div>
+            </ReactCSSTransitionGroup>
             </Fragment>
         )
     }

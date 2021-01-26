@@ -1,87 +1,34 @@
 import React, {Component, Fragment} from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import classnames from 'classnames';
-
 import { ResponsiveCalendar } from '@nivo/calendar'
-
-
 import {
     Row, Col,
     Button,
     CardHeader,
     Card,
     CardBody,
-    Progress,
     TabContent,
     TabPane,
-    CardImg, 
-    CardText,
     CardTitle, 
-    CardSubtitle, 
-    CardLink, 
-    CardFooter
 } from 'reactstrap';
 
 import PageTitle from '../../../Layout/AppMain/PageTitle';
 
 import {
-    AreaChart, Area, Line,
+    Area, Line,
     ResponsiveContainer,
     Bar,
     BarChart,
     ComposedChart,
     CartesianGrid,
-    Tooltip,
-    YAxis,
-    XAxis,
-    Legend,
-    
-    LineChart
 } from 'recharts';
 
 import {
-    faAngleUp,
-    faArrowRight,
     faArrowUp,
-    faArrowLeft,
     faAngleDown
 } from '@fortawesome/free-solid-svg-icons';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
-import avatar1 from '../../../assets/utils/images/avatars/1.jpg';
-import avatar2 from '../../../assets/utils/images/avatars/2.jpg';
-import avatar3 from '../../../assets/utils/images/avatars/3.jpg';
-import avatar4 from '../../../assets/utils/images/avatars/4.jpg';
-
-// let csvToJson = require('convert-csv-to-json');
-// let json = csvToJson.getJsonFromCsv("/src/DemoPages/Dashboards/Basic/index.js");
-// for(let i=0; i<json.length;i++){
-//     console.log(json[i]);
-// }
-const data3 = {
-                country_name: "Ethiopia",
-                country_code: "ETH",
-                series_name: "Ratio of female to male labor force participation rate (%) (modeled ILO estimate)",
-                series_code: "SL.TLF.CACT.FM.ZS",
-                2005: 82.6449448125566,
-                2006: 82.6998002193071,
-                2007: 82.7590429857776,
-                2008: 82.826659753454,
-                2009: 82.9029678814905,
-                2010: 82.9853293287766,
-                2011: 83.0761254269609,
-                2012: 83.1696965130941,
-                2013: 83.2632059290146,
-                2014: 83.7476815109764,
-                2015: 84.2361016647291,
-                2016: 84.6458540526964,
-                2017: 85.0760885061858,
-                2018: 85.4952278253771,
-                2019: 85.6404923844396,
-                2020: 85.7780853424301
-                }
-
 const cdata = [
     {"day": "2017-04-13", "value": 54},
     {"day": "2017-11-29", "value": 366},
@@ -91,25 +38,6 @@ const cdata = [
     {"day": "2018-08-28", "value": 351},
     {"day": "2019-09-21","value": 274},
     ]
-const new_data = [
-    {name: "2005", score: 82.6449448125566},
-    {name: "2006", score: 82.6998002193071},
-    {name: "2007", score: 82.7590429857776},
-    {name: "2008", score: 82.826659753454},
-    {name: "2009", score: 82.9029678814905},
-    {name: "2010", score: 82.9853293287766},
-    {name: "2011", score: 83.0761254269609},
-    {name: "2012", score: 83.1696965130941},
-    {name: "2013", score: 83.2632059290146},
-    {name: "2014", score: 83.7476815109764},
-    {name: "2015", score: 84.2361016647291},
-    {name: "2016", score: 84.6458540526964},
-    {name: "2017", score: 85.0760885061858},
-    {name: "2018", score: 85.4952278253771},
-    {name: "2019", score: 85.6404923844396},
-    {name: "2020", score: 85.7780853424301},
-    
-]
 const data = [
     {name: 'Page A', uv: 1000, pv: 2400, amt: 2400},
     {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
@@ -290,7 +218,7 @@ export default class AnalyticsDashboard1 extends Component {
                                             <div className="widget-chart-wrapper chart-wrapper-relative">
                                                 <ResponsiveContainer height={100}>
                                                     <BarChart data={data}>
-                                                        <Bar dataKey='uv' fill='#81a4ff' stroke='#3f6ad8' strokeWidth={2}/>
+                                                        <Bar dataKey='uv' fill='blue' stroke='blue' strokeWidth={2}/>
                                                     </BarChart>
                                                 </ResponsiveContainer>
                                             </div>
