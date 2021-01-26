@@ -1,13 +1,13 @@
 export const MainNav = [
     {
-        icon: 'pe-7s-ribbon',
+        icon: 'pe-7s-angle-right',
         label: 'Main Page',
         to: '#/dashboards/main',
     },
     {
         icon: 'pe-7s-angle-right',
         label: 'Economy',
-        to: '#/dashboards/main',
+        to: '#/dashboards/economy',
     },
 ];
 export const EconomyNav = [
