@@ -53,12 +53,13 @@ export const MainNav = [
 //         to: '#/components/carousel',
 //     },
 // ];
-// export const EducationNav = [
-//     {
-//         icon: 'pe-7s-angle-right',
-//         label: 'Gender Proportion',
-//         to: '#/charts/chartjs',
-//     },
+export const EducationNav = [
+    {
+        icon: 'pe-7s-angle-right',
+        label: 'Gender Proportion',
+        to: '#/charts/chartjs',
+    },
+];
 //     {
 //         icon: 'pe-7s-angle-right',
 //         label: 'School Enrollment',

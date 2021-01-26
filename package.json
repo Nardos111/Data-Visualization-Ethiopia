@@ -18,6 +18,7 @@
     "@nivo/calendar": "^0.67.0",
     "@nivo/core": "^0.67.0",
     "@nivo/line": "^0.67.0",
+    "@nivo/pie": "^0.67.0",
     "@nivo/radar": "^0.67.0",
     "apexcharts": "^3.23.1",
     "autoprefixer": "9.4.2",

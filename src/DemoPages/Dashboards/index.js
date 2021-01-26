@@ -7,6 +7,7 @@ import BasicDashboard from './Basic/';
 import AnalyticsDashboard1 from './Main'
 import economyDashboard from './Economy'
 import demographicDashboard from './Demographic'
+import othersDashboard from './Others'
 // Layout
 
 import AppSidebar from '../../Layout/AppSidebar/';
@@ -22,6 +23,7 @@ const Dashboards = ({match}) => (
                     <Route path={`${match.url}/main`} component={AnalyticsDashboard1}/>
                     <Route path={`${match.url}/economy`} component={economyDashboard}/>
                     <Route path={`${match.url}/demographic`} component={demographicDashboard}/>
+                    <Route path={`${match.url}/others`} component={othersDashboard}/>
 
 
                 </div>
