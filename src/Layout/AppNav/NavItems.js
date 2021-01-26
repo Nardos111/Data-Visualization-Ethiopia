@@ -1,24 +1,24 @@
 export const MainNav = [
-    {
-        icon: 'pe-7s-angle-right',
-        label: 'Main Page',
-        to: '#/dashboards/main',
-    },
-    {
-        icon: 'pe-7s-angle-right',
-        label: 'Economy',
-        to: '#/dashboards/economy',
-    },
-    {
-        icon: 'pe-7s-angle-right',
-        label: 'Demographic',
-        to: '#/dashboards/demographic',
-    },
-    {
-        icon: 'pe-7s-angle-right',
-        label: 'Others',
-        to: '#/dashboards/others',
-    },
+  {
+    icon: "pe-7s-angle-right",
+    label: "Main Page",
+    to: "#/dashboards/main",
+  },
+  {
+    icon: "pe-7s-angle-right",
+    label: "Economy",
+    to: "#/dashboards/economy",
+  },
+  {
+    icon: "pe-7s-angle-right",
+    label: "Demographic",
+    to: "#/dashboards/demographic",
+  },
+  {
+    icon: "pe-7s-angle-right",
+    label: "Others",
+    to: "#/dashboards/others",
+  },
 ];
 // export const EconomyNav = [
 //     {
@@ -53,19 +53,19 @@ export const MainNav = [
 //         to: '#/components/carousel',
 //     },
 // ];
-export const EducationNav = [
-    {
-        icon: 'pe-7s-angle-right',
-        label: 'Gender Proportion',
-        to: '#/charts/chartjs',
-    },
-];
+// export const EducationNav = [
+//     {
+//         icon: 'pe-7s-angle-right',
+//         label: 'Gender Proportion',
+//         to: '#/charts/chartjs',
+//     },
+// ];
 //     {
 //         icon: 'pe-7s-angle-right',
 //         label: 'School Enrollment',
 //         to: '#/dashboards/basic',
 //     },
-    
+
 // ];
 // export const PopulationNav = [
 //     {
