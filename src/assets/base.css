@@ -8162,6 +8162,7 @@ button,
   .vertical-nav-menu .metismenu-item {
     margin: 0;
     padding: 0;
+    padding-bottom: 5px;
     position: relative; }
   .vertical-nav-menu .metismenu-container {
     list-style: none; }
