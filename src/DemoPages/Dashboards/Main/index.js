@@ -117,7 +117,7 @@ export default class AnalyticsDashboard1 extends Component {
                                         <div className="widget-content-outer">
                                             <div className="widget-content-wrapper">
                                                 <div className="widget-content-left pr-2 fsize-1">
-                                                    <div className="widget-numbers mt-0 fsize-3 text-night-sky">71%</div>
+                                                    <div className="widget-numbers mt-0 fsize-3 text-night-sky">0.14</div>
                                                 </div>
                                                 <div className="widget-content-right w-100">
                                                     <div className="progress-bar-xs progress">

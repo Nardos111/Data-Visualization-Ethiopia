@@ -29,6 +29,7 @@ import {
     
     LineChart
 } from 'recharts';
+import * as GDP from '../../../assets/json_data/GDP.json';
 const bdata = [
     {"name": "Page A", "uv": 4000, "pv": 2400},
     {"name": "Page B", "uv": 3000, "pv": 1398},
@@ -212,15 +213,14 @@ With more than 112 million people (2019), Ethiopia is the second most populous n
                                         <TabPane tabId="11">
                                             <div className="widget-chart p-0">
                                                 <ResponsiveContainer height={300}>
-                                                <LineChart width={730} height={250} data={adata}
+                                                <LineChart width={730} height={250} data={GDP}
                                                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                                                     <CartesianGrid strokeDasharray="3 3" />
                                                     <XAxis dataKey="name" />
                                                     <YAxis />
                                                     <Tooltip />
                                                     <Legend />
-                                                    <Line type="monotone" dataKey="pv" stroke="blue" />
-                                                    <Line type="monotone" dataKey="uv" stroke="red" />
+                                                    <Line type="monotone" dataKey="value" stroke="blue" />
                                                     </LineChart>
                                                 </ResponsiveContainer>
                                             </div>
