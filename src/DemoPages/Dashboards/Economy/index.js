@@ -33,15 +33,17 @@ import {
 } from "recharts";
 
 import * as GDP from "../../../assets/json_data/GDP.json";
+import * as GNI from "../../../assets/json_data/GNI.json";
+import * as enrollment from "../../../assets/json_data/school_enrollment.json";
 import * as per_capita from "../../../assets/json_data/GDP_per_capita.json";
 import { parse } from "@fortawesome/fontawesome-svg-core";
 
+
 const rdata = [
-  { taste: "fruity", chardonay: 73, carmenere: 114, syrah: 96 },
-  { taste: "bitter", chardonay: 48, carmenere: 94, syrah: 30 },
-  { taste: "heavy", chardonay: 52, carmenere: 25, syrah: 57 },
-  { taste: "strong", chardonay: 76, carmenere: 62, syrah: 26 },
-  { taste: "sunny", chardonay: 66, carmenere: 120, syrah: 111 },
+  { taste: "Recurrent Expenditure", budget: 133321561063 },
+  { taste: "Capital Expenditure", budget: 160329788483 },
+  { taste: "Subsidy Appropriation to Regions", budget: 176361602899 },
+  { taste: "Sustainable Development Goals", budget: 6000000000 },
 ];
 const bdata = [
   { name: "Page A", uv: 4000, pv: 2400 },
@@ -458,7 +460,7 @@ export default class economyDashboard extends Component {
                       <ResponsiveContainer height={400}>
                         <ResponsiveRadar
                           data={rdata}
-                          keys={["chardonay", "carmenere", "syrah"]}
+                          keys={["budget"]}
                           indexBy="taste"
                           maxValue="auto"
                           margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
@@ -520,14 +522,13 @@ export default class economyDashboard extends Component {
                     </div>
                   </CardHeader>
                   <ResponsiveContainer height={300}>
-                    <BarChart width={730} height={250} data={bdata}>
+                    <BarChart width={730} height={250} data={GNI}>
                       <CartesianGrid strokeDasharray="3 3" />
                       <XAxis dataKey="name" />
                       <YAxis />
                       <Tooltip />
                       <Legend />
-                      <Bar dataKey="pv" fill="red" />
-                      <Bar dataKey="uv" fill="blue" />
+                      <Bar dataKey="value" fill="red" />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -540,7 +541,7 @@ export default class economyDashboard extends Component {
                     </div>
                   </CardHeader>
                   <ResponsiveContainer height={300}>
-                    <ComposedChart width={730} height={250} data={data}>
+                    <ComposedChart width={730} height={250} data={enrollment}>
                       <XAxis dataKey="name" />
                       <YAxis />
                       <Tooltip />
@@ -552,8 +553,7 @@ export default class economyDashboard extends Component {
                         fill="blue"
                         stroke="green"
                       />
-                      <Bar dataKey="pv" barSize={20} fill="orange" />
-                      <Line type="monotone" dataKey="uv" stroke="green" />
+                      <Line type="monotone" dataKey="value" stroke="green" />
                     </ComposedChart>
                   </ResponsiveContainer>
                 </div>
