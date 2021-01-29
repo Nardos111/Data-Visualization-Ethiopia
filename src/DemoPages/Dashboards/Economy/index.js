@@ -32,8 +32,8 @@ import {
   LineChart,
 } from "recharts";
 
-import * as GDP from '../../../assets/json_data/GDP.json';
-import * as per_capita from '../../../assets/json_data/GDP_per_capita.json';
+import * as GDP from "../../../assets/json_data/GDP.json";
+import * as per_capita from "../../../assets/json_data/GDP_per_capita.json";
 import { parse } from "@fortawesome/fontawesome-svg-core";
 
 const rdata = [
@@ -205,19 +205,18 @@ export default class economyDashboard extends Component {
     }
   }
   componentDidMount() {
-    fetch('http://data.fixer.io/api/latest?access_key=1bd52d530ad1f32c1595a3ff8a9c5b67')
-      .then(results => results.json())
-      .then(
-        (result) => {
-          this.setState({
-            exchange: result.rates
-          });
-        }
-      )
-      }
+    fetch(
+      "http://data.fixer.io/api/latest?access_key=1bd52d530ad1f32c1595a3ff8a9c5b67"
+    )
+      .then((results) => results.json())
+      .then((result) => {
+        this.setState({
+          exchange: result.rates,
+        });
+      });
+  }
   render() {
     return (
-      
       <Fragment>
         <ReactCSSTransitionGroup
           component="div"
@@ -234,9 +233,9 @@ export default class economyDashboard extends Component {
               icon="pe-7s-cash icon-gradient bg-night-sky"
             />
             <div>
-      <h1>List of todos</h1>
-      { console.log(this.state.exchange) }
-    </div>
+              <h1>List of todos</h1>
+              {console.log(this.state.exchange)}
+            </div>
             <Row>
               <Col lg="12">
                 <Card className="main-card mb-3">
@@ -279,17 +278,26 @@ export default class economyDashboard extends Component {
                       <div className="widget-chart p-0">
                         <ResponsiveContainer height={300}>
                           <LineChart
-                            width={730}
-                            height={250}
                             data={GDP}
-                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                            margin={{
+                              top: 10,
+                              right: 30,
+                              left: 80,
+                              bottom: 5,
+                            }}
                           >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
-                            <YAxis />
+                            <YAxis
+                              domain={[7324903188.4058, 95912590628.1412]}
+                            />
                             <Tooltip />
                             <Legend />
-                            <Line type="monotone" dataKey="value" stroke="blue" />
+                            <Line
+                              type="monotone"
+                              dataKey="value"
+                              stroke="blue"
+                            />
                           </LineChart>
                         </ResponsiveContainer>
                       </div>
@@ -382,7 +390,13 @@ export default class economyDashboard extends Component {
                           <div className="icon-wrapper-bg bg-light" />
                           <i className="lnr-diamond icon-gradient bg-happy-itmeo" />
                         </div>
-                        <div className="widget-numbers">{Math.round(parseFloat(this.state.exchange.ETB)/parseFloat(this.state.exchange.USD)*100)/100}</div>
+                        <div className="widget-numbers">
+                          {Math.round(
+                            (parseFloat(this.state.exchange.ETB) /
+                              parseFloat(this.state.exchange.USD)) *
+                              100
+                          ) / 100}
+                        </div>
                         <div className="widget-subheading">
                           United States Dollar
                         </div>
@@ -394,7 +408,9 @@ export default class economyDashboard extends Component {
                           <div className="icon-wrapper-bg bg-light" />
                           <i className="lnr-diamond icon-gradient bg-happy-itmeo" />
                         </div>
-                        <div className="widget-numbers">{Math.round(this.state.exchange.ETB*100)/100}</div>
+                        <div className="widget-numbers">
+                          {Math.round(this.state.exchange.ETB * 100) / 100}
+                        </div>
                         <div className="widget-subheading">Euro</div>
                       </div>
                     </Col>
@@ -404,7 +420,13 @@ export default class economyDashboard extends Component {
                           <div className="icon-wrapper-bg bg-light" />
                           <i className="lnr-diamond icon-gradient bg-happy-itmeo" />
                         </div>
-                        <div className="widget-numbers">{Math.round(this.state.exchange.ETB/this.state.exchange.GBP*100)/100}</div>
+                        <div className="widget-numbers">
+                          {Math.round(
+                            (this.state.exchange.ETB /
+                              this.state.exchange.GBP) *
+                              100
+                          ) / 100}
+                        </div>
                         <div className="widget-subheading">Pound</div>
                       </div>
                     </Col>
@@ -414,7 +436,13 @@ export default class economyDashboard extends Component {
                           <div className="icon-wrapper-bg bg-light" />
                           <i className="lnr-diamond icon-gradient bg-happy-itmeo" />
                         </div>
-                        <div className="widget-numbers">{Math.round(this.state.exchange.ETB/this.state.exchange.CNY*100)/100}</div>
+                        <div className="widget-numbers">
+                          {Math.round(
+                            (this.state.exchange.ETB /
+                              this.state.exchange.CNY) *
+                              100
+                          ) / 100}
+                        </div>
                         <div className="widget-subheading">Yuan</div>
                       </div>
                     </Col>
