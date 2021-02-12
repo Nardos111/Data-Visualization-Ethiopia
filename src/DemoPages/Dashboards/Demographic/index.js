@@ -8,22 +8,10 @@ import PolarExample from "../../Charts/ChartJs/Examples/polar";
 import BubbleExample from "../../Charts/ChartJs/Examples/bubble";
 import { ResponsiveContainer } from "recharts";
 import HorizontalBarExample from "../../Charts/ChartJs/Examples/horizontalBar";
-
+import * as ddata from "../../../assets/json_data/population.json"
 const tdata = [
   {
     country: "AD",
-    "hot dog": 94,
-    "hot dogColor": "hsl(284, 70%, 50%)",
-    burger: 4,
-    burgerColor: "hsl(81, 70%, 50%)",
-    sandwich: 147,
-    sandwichColor: "hsl(290, 70%, 50%)",
-    kebab: 82,
-    kebabColor: "hsl(348, 70%, 50%)",
-    fries: 199,
-    friesColor: "hsl(332, 70%, 50%)",
-    donut: 135,
-    donutColor: "hsl(346, 70%, 50%)",
   },
   {
     country: "AE",
@@ -117,6 +105,7 @@ const tdata = [
   },
 ];
 
+
 export default class demographicDashboard extends Component {
   constructor() {
     super();
@@ -167,16 +156,12 @@ export default class demographicDashboard extends Component {
                     <CardTitle>Male and Female Population</CardTitle>
                     <ResponsiveContainer height={300}>
                       <ResponsiveBar
-                        data={tdata}
+                        data={ddata}
                         keys={[
-                          "hot dog",
-                          "burger",
-                          "sandwich",
-                          "kebab",
-                          "fries",
-                          "donut",
+                          "male",
+                          "female",
                         ]}
-                        indexBy="country"
+                        indexBy="year"
                         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
                         padding={0.3}
                         valueScale={{ type: "linear" }}
