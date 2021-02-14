@@ -2,10 +2,10 @@ import React from 'react';
 import {Line} from 'react-chartjs-2';
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019'],
   datasets: [
     {
-      label: 'My First dataset',
+      label: 'Child Mortality (per 1000 children)',
       fill: true,
       lineTension: 0.1,
       backgroundColor: 'rgba(75,192,192,0.4)',
@@ -23,7 +23,7 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59, 80, 81, 56, 55, 40]
+      data: [21.8947476835616, 20.0837964547624, 18.4603701466787, 16.9415111786822, 15.5651494741795, 14.3181453484042, 13.2655035395647, 12.4191451317631, 11.7403425300586, 11.1644735765227, 10.652389932278]
     }
   ]
 };

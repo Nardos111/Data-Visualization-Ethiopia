@@ -308,7 +308,7 @@ export default class demographicDashboard extends Component {
               <Col lg="6">
                 <Card className="main-card mb-3">
                   <CardBody>
-                    <CardTitle>Gender</CardTitle>
+                    <CardTitle>Languages</CardTitle>
                     <PolarExample />
                   </CardBody>
                 </Card>

@@ -16,18 +16,25 @@ import BarExample from "../../Charts/ChartJs/Examples/bar";
 import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveContainer } from "recharts";
 const pdata = [
-  { id: "make", label: "make", value: 411, color: "hsl(180, 70%, 50%)" },
+  { id: "Oromo", label: "Oromo", value: 33.8, color: "hsl(180, 70%, 50%)" },
   {
     id: "javascript",
-    label: "javascript",
-    value: 460,
+    label: "Amharic",
+    value: 29.3,
     color: "hsl(68, 70%, 50%)",
   },
-  { id: "ruby", label: "ruby", value: 531, color: "hsl(125, 70%, 50%)" },
-  { id: "sass", label: "sass", value: 415, color: "hsl(197, 70%, 50%)" },
-  { id: "hack", label: "hack", value: 70, color: "hsl(281, 70%, 50%)" },
+  { id: "Somali", label: "Somali", value: 6.2, color: "hsl(125, 70%, 50%)" },
+  { id: "Tigrinya", label: "Tigrinya", value: 5.9, color: "hsl(197, 70%, 50%)" },
+  { id: "Wolaytta", label: "Wolaytta", value: 2.2, color: "hsl(281, 70%, 50%)" },
+  { id: "Sidamo", label: "Sidamo", value: 2, color: "hsl(281, 70%, 50%)" },
+  { id: "Gurage", label: "Gurage", value: 2, color: "hsl(281, 70%, 50%)" },
+  { id: "Hadiyya", label: "Hadiyya", value: 1.7, color: "hsl(281, 70%, 50%)" },
+  { id: "Afar", label: "Afar", value: 1.7, color: "hsl(281, 70%, 50%)" },
+  { id: "Gamo", label: "Gamo", value: 1.5, color: "hsl(281, 70%, 50%)" },
+  { id: "Gedeo", label: "Gedeo", value: 1.3, color: "hsl(281, 70%, 50%)" },
+  { id: "Kafa", label: "Kafa", value: 1.1, color: "hsl(281, 70%, 50%)" },
+  { id: "Other Languages", label: "Other Languages", value: 8.1, color: "hsl(281, 70%, 50%)" },
 ];
-
 export default class othersDashboard extends Component {
   constructor() {
     super();
