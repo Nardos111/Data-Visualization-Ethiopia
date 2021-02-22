@@ -64,7 +64,7 @@ const data2 = [
   { name: "Page G", uv: 5349, pv: 3430, amt: 3210 },
 ];
 
-export default class AnalyticsDashboard1 extends Component {
+export default class environmentalDashboard extends Component {
   constructor() {
     super();
 
@@ -103,8 +103,8 @@ export default class AnalyticsDashboard1 extends Component {
         >
           <div>
             <PageTitle
-              heading="Main Page"
-              subheading="This is the main page"
+              heading="Environmental"
+              subheading="This section provides the options to visualize historical climate data for different timeframes via map and annual cycle chart."
               icon="pe-7s-leaf icon-gradient bg-night-sky"
             />
             <div className="row">

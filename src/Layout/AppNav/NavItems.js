@@ -6,13 +6,18 @@ export const MainNav = [
   },
   {
     icon: "pe-7s-angle-right",
+    label: "Demographic",
+    to: "#/dashboards/demographic",
+  },
+  {
+    icon: "pe-7s-angle-right",
     label: "Economy",
     to: "#/dashboards/economy",
   },
   {
     icon: "pe-7s-angle-right",
-    label: "Demographic",
-    to: "#/dashboards/demographic",
+    label: "Environmental",
+    to: "#/dashboards/environmental",
   },
   {
     icon: "pe-7s-angle-right",
