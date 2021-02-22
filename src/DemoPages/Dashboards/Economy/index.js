@@ -281,7 +281,7 @@ export default class economyDashboard extends Component {
               <Row>
                 <Col md="12" lg="6">
                   <Row>
-                    <Col md="6">
+                    <Col md="12">
                       <div className="mb-3 widget-chart card-hover-shadow-2x">
                         <Card>
                           <CardHeader className="card-header-tab">
@@ -292,7 +292,6 @@ export default class economyDashboard extends Component {
                         </Card>
                       </div>
                     </Col>
-                    <Col md="6"></Col>
                     <Col md="6">
                       <div className="card mb-3 widget-chart card-hover-shadow-2x">
                         <div className="icon-wrapper border-light rounded">

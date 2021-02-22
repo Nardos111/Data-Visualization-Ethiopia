@@ -248,7 +248,7 @@ export default class environmentalDashboard extends Component {
                   <div className="widget-chart-content">
                     <div className="icon-wrapper rounded-circle">
                       <div className="icon-wrapper-bg bg-night-sky" />
-                      <i className="lnr-laptop-phone text-night-sky" />
+                      <i className="lnr-sun text-night-sky" />
                     </div>
                     <div className="widget-numbers">5.82k</div>
                     <div className="widget-subheading">Weather Pattern</div>
